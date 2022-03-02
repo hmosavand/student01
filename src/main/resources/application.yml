@@ -1,0 +1,24 @@
+spring:
+  application:
+    name: student01
+  datasource:
+    url: jdbc:mysql://localhost:3306/ee8?createDatabaseIfNotExist=true
+    username: root
+    password:
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        driverClassName:
+          com.mysql.cj.jdbc.Driver
+        dialect:
+          org.hibernate.dialect.MySQL8Dialect
+    open-in-view: true
+
+server:
+  port: 8080
+logging:
+  level:
+    com:
+      school: debug
